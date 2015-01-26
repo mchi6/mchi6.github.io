@@ -28,6 +28,30 @@
     <link rel="shortcut icon" href="./files/icon.ico">
     <title>Michael Chi | Portfolio</title>
 
+
+    <script type="text/javascript" src="./files/fancybox/lib/jquery.js"></script>
+    <script type="text/javascript" src="./files/fancybox/lib/mousewheel.js"></script>
+    <script type="text/javascript" src="./files/fancybox/source/jquery.fancybox.js"></script>
+    <link  type="text/css" href="./files/fancybox/source/jquery.fancybox.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="./files/fancybox/source/fancyboxpack.js"></script>
+    <script type="text/javascript" src="./files/fancybox/source/helpers/jquery.fancybox-media.js"></script>
+    <script type="text/javascript" src="./files/fancybox/source/helpers/jquery.fancybox-buttons.js"></script>
+    
+    <style>
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    a:hover 
+    {
+        color: #444;
+        text-decoration:none; 
+        cursor:pointer;  
+    }
+    </style>
+
+
 </head>
 
 <body><div id="font">
@@ -57,11 +81,12 @@
 <div class="container">
 
     <div id="title">WELCOME TO MY PORTFOLIO
-    <a class="button button-project round-corners" href="./files/MichaelChiResume.pdf" target="_blank">
-    <img src="./files/logo/glass.png" style ="margin-top:-1px;width:20%;margin-left:-4px;"/> 
+    <a class="button button-project round-corners" href="./files/about/MichaelChiResume.pdf" target="_blank">
+    <img src="./files/button/glass.png" style ="margin-top:-1px;width:20%;margin-left:-4px;"/> 
     <span style="font-size:12px;">VIEW RESUME</span></a>
     </div>
-    <img src="./files/fbla.png" style="float:right;margin:20px 35px 30px 30px;padding-left:5px;padding-right:5px;" width="31%">
+    <a class="fancybox" href="./files/about/fbla.png">
+        <img src="./files/about/fbla.png" style="float:right;margin:20px 45px 30px 30px;border: 1px solid grey; border-top-right-radius:.4em;border-bottom-left-radius:.4em;" width="29%"></a>
     
     <div id="content">
         <p> <b style="font-size:15px;">Welcome to my site!!</b>&nbsp;&nbsp;My name is Michael Chi! I am 
@@ -85,11 +110,29 @@
         </p>
     </div>
 
-    <p style="padding: 10px 20px; margin-bottom:-11px;"><img src="./files/About/2.png" atl="Chinese Student Association" style="padding-left:40px;"><img src="./files/About/4.png" atl="GT Magicians" style="padding-left:20px"><img src="./files/About/3.png" atl="Impact" style="padding-left:20px"><img src="./files/About/1.png" atl="Swagiliers" style="padding-left:20px">
+    <p style="padding: 10px 20px; margin-bottom:-11px;">
+    <a class="fancybox" href="https://www.facebook.com/gatechcsa" rel="gallery">
+        <img src="./files/about/1.png" atl="Chinese Student Association" style="margin-left:28px" class="fancyimage"></a>
+    <a href="https://www.youtube.com/watch?v=DDHrBqZl2N8&feature=youtu.be&t=0m52s" target="_blank">
+        <img src="./files/about/2.png" atl="GT Magicians" class="fancyimage mtwenty"></a>
+    <a href="https://www.youtube.com/watch?v=5zxQfAhl2Ac&feature=youtu.be&t=22m25s" target="_blank">
+        <img src="./files/about/3.png" atl="Hip-Hop Dance Team 'Impact'" class="fancyimage mtwenty"></a>
+    <a class="fancybox" href="./files/about/Photo4.jpg" rel="gallery">
+        <img src="./files/about/4.png" atl="Intramural Basketball Team 'Swagaliers'" class="fancyimage mtwenty"></a>
     </p>
-    <div id="table4"> <ul style="font-size: 18px;"><li>CULTURE</li> <li>MAGIC</li> <li>DANCE</li> <li>BASKETBALL</li> </ul>
+    <div id="table4"> 
+    <ul style="font-size: 18px;margin-left:7px;">
+        <a class="fancybox" href="https://www.facebook.com/gatechcsa" rel="gallery">
+            <li>CULTURE</li></a>
+        <a class="fancybox" href="https://www.youtube.com/watch?v=DDHrBqZl2N8&feature=youtu.be&t=0m52s" target="_blank">
+            <li>MAGIC</li></a>
+        <a href="https://www.youtube.com/watch?v=5zxQfAhl2Ac&feature=youtu.be&t=22m25s" target="_blank">
+            <li>DANCE</li></a>
+        <a class="fancybox" href="./files/about/Photo4.jpg" rel="gallery">
+            <li>BASKETBALL</li></a>
+    </ul>
     </div>
-    <div id="table4"> <ul style="font-size: 12px;"><li>Chinese Student Assoc.</li> <li>Georgia Tech Magicians</li> <li>Hip-Hop Dance Team</li> <li>Intramural Basketball Team</li> </ul>
+    <div id="table4"> <ul style="font-size: 12px;margin-left:5px;"><li>Chinese Student Assoc.</li> <li>Georgia Tech Magicians</li> <li>Hip-Hop Dance Team</li> <li>Intramural Basketball Team</li> </ul>
     </div>
 
     <br>
@@ -105,6 +148,22 @@
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!--<script src="./Narrow_files/ie10-viewport-bug-workaround.js"></script>-->
+
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function() {
+            $('.fancybox').fancybox({
+                transitionIn : 'none', 
+                transitionOut: 'none',
+                prevEffect : 'none',
+                nextEffect : 'none',
+                fitToView  : true,  
+                openSpeed : 100,
+                closeSpeed : 50,
+                });
+
+            $(".fancybox.iframe").fancybox();
+        });
+    </script>
 
 </div> 
 </body>

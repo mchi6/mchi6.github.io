@@ -1,6 +1,16 @@
 /* Additionals */
 @import url(//fonts.googleapis.com/css?family=Ruda:400,700);
 
+.fancyimage {
+    border: 1px solid #444; 
+    border-top-right-radius:.4em;
+    border-bottom-left-radius:.4em;
+}
+
+.mtwenty {
+    margin-left:20px;
+}
+
 #BG1 {
   left:50%;
   top:0;
