@@ -23,6 +23,19 @@
     <link rel="shortcut icon" href="./files/icon.ico">
     <title>Michael Chi | Portfolio</title>
 
+    <script type="text/javascript" src="./files/fancybox/lib/jquery.js"></script>
+    <script type="text/javascript" src="./files/fancybox/lib/mousewheel.js"></script>
+    <script type="text/javascript" src="./files/fancybox/source/jquery.fancybox.js"></script>
+    <link  type="text/css" href="./files/fancybox/source/jquery.fancybox.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="./files/fancybox/source/fancyboxpack.js"></script>
+    <script type="text/javascript" src="./files/fancybox/source/helpers/jquery.fancybox-media.js"></script>
+    <script type="text/javascript" src="./files/fancybox/source/helpers/jquery.fancybox-buttons.js"></script>
+
+
+    <link rel="stylesheet" href="./files/slicknav/slicknav.css" />
+    <script src="./files/slicknav/jquery.slicknav.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
 </head>
 
 <body>   
@@ -30,14 +43,16 @@
 
     <nav class="navbar navbar-fixed-top" role="navigation">
     <div class="header"><div id="innerheader">  
-      <ul class="nav">
-        <li style="margin-left:5px; height: 60px; border-bottom: 4px solid; padding: 0 0px;">
-            <a href="./index.html" style="padding: 0px;"><h3 align="center">MICHAEL CHI</h3></a></li>
-        <li style="margin-left:80px;"><a href="./about.html">ABOUT</a></li>
+      <ul class="nav" id ="menu">
+        <li class="titlestyle" >
+            <a href="./index.html" style="padding: 0px;"><h3 align="center">MICHAEL CHI</h3></a>
+        </li>
+        <li id="mobile-show"><a href="./index.html">HOME</a></li>
+        <li id="m-boost"><a href="./about.html">ABOUT</a></li>
         <li><a href="./projects.html">PROJECTS</a></li>
         <li><a href="./graphics.html">UX DESIGN</a></li>
-        <li><a href="./contact.html"  style ="height: 60px; border-bottom: 4px solid;">CONTACT</a></li>
-      </ul>       
+        <li class="current"><a href="./contact.html">CONTACT</a></li>
+      </ul>    
     </div></div>
     </nav>
 
@@ -71,6 +86,12 @@
         <br>(678) 514-9211</p>
     </footer>
     
+    <script>
+        $(function(){
+            $('#menu').slicknav({label: '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; MICHAEL CHI',});
+        });
+    </script>
+
     </div>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!--<script src="./Narrow_files/ie10-viewport-bug-workaround.js"></script>-->
