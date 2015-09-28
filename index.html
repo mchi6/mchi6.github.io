@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="./files/bootstrap.css">
     <link rel="stylesheet" href="./files/resumestyle.css">
 
+    <script type="text/javascript" src="./files/fancybox/lib/jquery.js"></script>
+
 
     <script>
     function toggle_visibility(id) {
@@ -32,6 +34,19 @@
       if(open.style.display == 'none') open.style.display = 'inline';
        else open.style.display = 'none';
     }
+    </script>
+
+
+    <script>
+    $(document).scroll(function() {
+            var y = $(this).scrollTop();
+            var x = $(document).height();
+            if (y > (1220)) {
+              $('.portfolio').addClass( "enlarge" );
+            } else {
+              $('.portfolio').removeClass( "enlarge" );
+            }
+        });
     </script>
 </head>
 
@@ -52,6 +67,10 @@
     <h1 class="page-title"><b>MICHAEL CHI</b></h1>
     <!--<small> <i class="fa fa-clock-o"></i> Last Updated on: <time>Sunday, October 05, 2014</time></small>-->
   </header>
+
+     <footer class="footer">
+        <p>Fall 2015 Online Resume</p>
+    </footer>
 <div class="row"style="margin-bottom:80px">
   <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
     <div class="panel panel-default">
@@ -279,15 +298,14 @@
       </div>
 
       <a href="portfolio.html" style="text-decoration: none; color:black">
-        <div class="bs-callout bs-callout-danger bs-callout-right" style="text-align:center">
+        <div class="bs-callout bs-callout-danger bs-callout-right portfolio" style="text-align:center">
         <h4><b>PORTFOLIO</b></h4>
-        <p class="sub">
+        <p style="font-size:12px">
         click here for my portfolio website
         <!--<br><i>( but honestly... just making cool stuff )</i>-->
         </p>
       </div>
       </a>
-
       <!--<div class="bs-callout bs-callout-danger">
         <h4>Key Expertise</h4>
         <ul class="list-group">
@@ -374,7 +392,9 @@
 
   </div>
 </div>
-    
+
+ 
+
 </div>
 
 </div>

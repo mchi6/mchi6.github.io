@@ -2,6 +2,17 @@
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
 @import url(//fonts.googleapis.com/css?family=Ruda:400,700);
 
+
+
+.footer {
+
+  max-width: 750px;
+  max-height:16px;
+  text-align: left;
+  margin: auto;
+  font-size:14px;
+}
+
 .ul-hover {
   display:none;
 }
@@ -153,10 +164,6 @@ opacity:0.9;
     border-left-color: #d9534f;
 }
 
-.bs-callout-right {
-  border-color: #d9534f;
-  border-width: 1px 1px 1px 1px;
-}
 
 .bs-callout-danger h4{
     color: #d9534f;
@@ -268,4 +275,22 @@ opacity:0.9;
   background-size:100% 100%;
   background-position:center top;
   background-color: #D9534F;
+}
+
+
+
+.bs-callout-right {
+  border-color: #d9534f;
+  border-width: 0px;
+}
+.bs-callout-right:hover {
+  background-color:rgba(248,95,90,0.1);
+}
+.portfolio {
+  transform:scale(1);
+  transition:all .5s ease-out;
+}
+.enlarge {
+  border-width: 2px 5px 2px 5px;
+  font-size:150%;
 }
