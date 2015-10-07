@@ -45,13 +45,17 @@
     <script type="text/javascript">
         $(document).scroll(function() {
 
+            var ptop = $("#project-top").offset().top;
+            var pbot = $("#project-bottom").offset().top;
+            var uxtop = $("#ux-top").offset().top;
+            var uxbot = $("#ux-bottom").offset().top;
             var y = $(this).scrollTop();
-            if (y > 1750 && y < 5700) {
+            if (y > ptop && y < pbot) {
               $('.sideScroll1').fadeIn();
             } else {
               $('.sideScroll1').fadeOut();
             }
-            if (y > 6000 && y < 14500) {
+            if (y > uxtop && y < uxbot) {
               $('.sideScroll2').fadeIn();
             } else {
               $('.sideScroll2').fadeOut();
@@ -190,7 +194,7 @@
 <br><br>
 <a class="anchor" name="002"></a>
 <!--Page title--> 
-    <h1 align="center" style="margin-right:200px;margin-top:140px; margin-bottom: -4px; font-size:60px">PROJECTS</h1>
+    <h1 id="project-top" align="center" style="margin-right:200px;margin-top:140px; margin-bottom: -4px; font-size:60px">PROJECTS</h1>
 
 <div class="container">
 
@@ -438,7 +442,7 @@
     </div>
 
 
-    <a href ="./files/projects/5/2.png" class="fancybox" rel="gallery5"><img src="./files/projects/5/2.png" style="margin-left: 73px; margin-top:15px;margin-bottom:5px;margin-top:-12px; width:38%;" class="fancyimage"></a>
+    <a  id="project-bottom" href ="./files/projects/5/2.png" class="fancybox" rel="gallery5"><img src="./files/projects/5/2.png" style="margin-left: 73px; margin-top:15px;margin-bottom:5px;margin-top:-12px; width:38%;" class="fancyimage"></a>
     <a href ="./files/projects/5/1.png" class="fancybox" rel="gallery5"><img src="./files/projects/5/1.png" style="margin-left: 32px; margin-top:15px;margin-bottom:5px;margin-top:-12px; width:38%;" class="fancyimage"></a>
     <div id="table2"> <ul style="font-size: 18px;"><li>Final P1 Demo</li> <li>Final P2 Demo</li> </ul>
     <div id="table2"> <ul style="font-size: 12px;"><li>Observer Design</li> <li>Builder Design</li></ul>
@@ -466,7 +470,7 @@
 
     <a class="anchor" name="003"></a>
       <!--Page title--> 
-    <h1 align="center" style="margin-right:200px; margin-top:140px; margin-bottom: -4px; font-size:60px"><B>UX</B> DESIGN</h1>
+    <h1  id="ux-top"  align="center" style="margin-right:200px; margin-top:140px; margin-bottom: -4px; font-size:60px"><B>UX</B> DESIGN</h1>
 
 <div class="container" style=" background-image: url(./files/Graphics/tempback.png); background-repeat: no-repeat; background-position: bottom right;">
 
@@ -811,7 +815,7 @@
 
     <br>
     <br>
-    <br>
+    <br  id="ux-bottom">
 
 
     

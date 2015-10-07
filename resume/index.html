@@ -39,9 +39,9 @@
 
     <script>
     $(document).scroll(function() {
-            var y = $(this).scrollTop();
-            var x = $(document).height();
-            if (y > (1220)) {
+            var y = $(this).scrollTop() + $(window).height();
+            var rtop = $("#rtop").offset().top;
+            if (y > rtop) {
               $('.portfolio').addClass( "enlarge" );
             } else {
               $('.portfolio').removeClass( "enlarge" );
@@ -220,7 +220,7 @@
           <tbody>
             <tr>
               <td>Programming</td>
-              <td>Java, Python, Shell Scripting, XML, JSON, HTML, CSS, JavaScript, JQuery</td>
+              <td>Java, Python, Shell Scripting, Swift, XML, JSON, HTML, CSS, JavaScript, JQuery</td>
             </tr>
             <tr>
               <td>Software / Frameworks</td>
@@ -297,7 +297,7 @@
         </ul>
       </div>
 
-      <a href="https://mchi6.github.io" style="text-decoration: none; color:black">
+      <a id="rtop" href="https://mchi6.github.io" style="text-decoration: none; color:black">
         <div class="bs-callout bs-callout-danger bs-callout-right portfolio" style="text-align:center">
         <h4><b>PORTFOLIO</b></h4>
         <p style="font-size:12px">
