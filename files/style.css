@@ -1,8 +1,52 @@
 /* Additionals */
 @import url(//fonts.googleapis.com/css?family=Ruda:400,700);
 
+
+@media screen and (min-width: 0px) { .image-main { width:100%; } }
+@media screen and (min-width: 880px) { .image-main { width:50%;margin-top:20px; } }
+
+
+.head-title {
+  margin-right:200px; 
+  margin-top:90px; 
+  margin-bottom: -4px; 
+  font-size:60px
+}
+
+.background-main {
+  width: 100%;
+  height: calc(100vh - 61px);
+  background-image: url(https://www.prism.gatech.edu/~mchi6/github/bg);
+  background-size: cover;
+  
+  background-repeat: no-repeat;
+}
+.tt { 
+  position: relative;
+  display: table;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+.ttbb {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  color:white;
+  font-size: 400%;
+}
+
 .slicknav_menu {
     display:none;
+}
+
+#header {
+  z-index: 9;
+  margin-top:-1px;
+  border-top:1px solid black;
 }
 
 .current {
@@ -130,10 +174,6 @@ a.anchor{
   position: relative; 
   top: -80px; 
   visibility: hidden;
-}
-
-#font {
-    font: normal 16px "Ruda", Arial, sans-serif;
 }
 
 #innerheader {
@@ -515,7 +555,8 @@ a.anchor{
 
 /* Space out content a bit */
 body {  
-  padding-top: 20px;
+  font: normal 16px "Ruda", Arial, sans-serif;
+  padding-top: 0px;
   padding-bottom: 20px;
 }
 
@@ -528,7 +569,7 @@ body {
 
 /* Custom page header */
 .header {
-  margin: 0 auto;
+  /*margin: 0 auto;*/
   background-color:rgba(256, 256, 256, 0.9);
   border-bottom: 1px solid #818A96;
   height: 60px;
@@ -561,11 +602,12 @@ body {
 /* Container */
 @media (min-width: 768px) {
   .container {
-    max-width: 750px;
+  max-width: 750px;
 	background-color: #F1F1F1;
 	border: 1px solid #A5ABB3;
 	padding-top: 50px;
 	padding-bottom: 60px;
+  margin-bottom:100px;
 	border-top-right-radius:3em;
 	border-bottom-left-radius:3em;
   }
@@ -590,9 +632,14 @@ body {
   .footer {
     padding-right: 0;
     padding-left: 0;
+
   }
   /* Space out the masthead */
   .header {
     margin-bottom: 30px;
+  }
+
+  .footer {
+    margin-top:-100px;
   }
 }

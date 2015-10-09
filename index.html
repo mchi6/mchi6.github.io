@@ -29,13 +29,15 @@
     <title>Michael Chi | Portfolio</title>
 
 
-    <script type="text/javascript" src="./files/fancybox/lib/jquery.js"></script>
+    <script type="text/javascript" src="./files/js/jquery-2.1.1.min.js"></script>
+    
     <script type="text/javascript" src="./files/fancybox/lib/mousewheel.js"></script>
     <script type="text/javascript" src="./files/fancybox/source/jquery.fancybox.js"></script>
     <link  type="text/css" href="./files/fancybox/source/jquery.fancybox.css" rel="stylesheet" media="screen">
     <script type="text/javascript" src="./files/fancybox/source/fancyboxpack.js"></script>
     <script type="text/javascript" src="./files/fancybox/source/helpers/jquery.fancybox-media.js"></script>
     <script type="text/javascript" src="./files/fancybox/source/helpers/jquery.fancybox-buttons.js"></script>
+
     
     <link rel="stylesheet" href="./files/slicknav/slicknav.css" />
     <script src="./files/slicknav/jquery.slicknav.min.js"></script>
@@ -68,6 +70,13 @@
         });
     </script>
 
+    <script src="./files/js/jquery.sticky.js"></script>
+
+    <script>
+    $(window).load(function(){
+        $("#header").sticky({ topSpacing: 0 });
+    });
+    </script>
 
 
     <style>
@@ -88,12 +97,18 @@
 </head>
 
 <body>
-    <div id="font">
-    <nav class="navbar navbar-fixed-top" role="navigation">
-    <div class="header"><div id="innerheader">  
+     <a class="fancybox-video" href="https://www.youtube.com/embed/pi13iEiXgcU?autoplay=1"><div class="container-fluid background-main">
+        <div class="tt">
+            <span class="ttbb">
+        <img src="./files/index/videobutton.png" class="image-main" /></span>
+        </div>
+    </div></a>
+
+    <!--<nav class="navbar" role="navigation">-->
+    <div id="header" class="header"><div id="innerheader">  
       <ul class="nav" id ="menu">
         <li class="titlestyle" >
-            <a href="#000" style="padding: 0px;"><h3 align="center">MICHAEL CHI</h3></a>
+            <a href="#" style="padding: 0px;"><h3 align="center">MICHAEL CHI</h3></a>
         </li>
         <li id="mobile-show"><a href="#000">HOME</a></li>
         <li id="m-boost"><a href="#001">ABOUT</a></li>
@@ -103,14 +118,9 @@
       </ul>    
     </div></div>
     </nav>
-    <a class="anchor" name="000"></a>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    
 
-    <h1 align="center" style="margin-right:50px; margin-bottom: -4px; font-size:60px"></h1>
+    <!--<h1 align="center" style="margin-right:50px; margin-bottom: -4px; font-size:60px"></h1>
 
     <div class="container" style="border:1px solid grey;">
         <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/pi13iEiXgcU?autoplay=1">
@@ -120,15 +130,16 @@
     <footer class="footer">
         <p>Watch Intro Video
         Above in 1080p</p>
-        <!--<p>© 2015 Michael Chi 
+        <p>© 2015 Michael Chi 
         <br>mchi6@gatech.edu
-        <br>(678) 514-9211</p>-->
+        <br>(678) 514-9211</p>
     </footer>
     
-    <br><br><br><br><br>
-
+    <br><br><br><br><br>-->
+    <a class="anchor" name="000"></a>
+    <br>
     <a class="anchor" name="001"></a>
-    <h1 align="center" style="margin-right:200px;margin-top:100px; margin-bottom: -4px; font-size:60px">ABOUT ME</h1>
+    <h1 align="center" class="head-title">ABOUT ME</h1>
 
 <div class="container">
 
@@ -137,8 +148,8 @@
     <img src="./files/button/glass.png" style ="margin-top:-1px;width:20%;margin-left:-4px;"/> 
     <span style="font-size:12px;">VIEW RESUME</span></a>
     </div>
-    <a class="fancybox" href="./files/about/fbla.png">
-        <img src="./files/about/fbla.png" style="float:right;margin:20px 45px 30px 30px;border: 1px solid grey; border-top-right-radius:.4em;border-bottom-left-radius:.4em;" width="29%"></a>
+    <a class="fancybox" href="./files/about/portrait.png">
+        <img src="./files/about/portrait.png" style="float:right;margin:20px 45px 30px 30px;border: 1px solid grey; border-top-right-radius:.4em;border-bottom-left-radius:.4em;" width="29%"></a>
     
     <div id="content">
         <p> <b style="font-size:15px;">Welcome to my site!!</b>&nbsp;&nbsp;My name is Michael Chi! I am 
@@ -169,7 +180,7 @@
         <img src="./files/about/2.png" atl="GT Magicians" class="fancyimage mtwenty"></a>
     <a href="https://www.youtube.com/watch?v=5zxQfAhl2Ac&feature=youtu.be&t=22m25s" target="_blank">
         <img src="./files/about/3.png" atl="Hip-Hop Dance Team 'Impact'" class="fancyimage mtwenty"></a>
-    <a class="fancybox" href="./files/about/Photo4.jpg" rel="gallery">
+    <a class="fancybox" href="./files/about/photo4.jpg" rel="ggggg">
         <img src="./files/about/4.png" atl="Intramural Basketball Team 'Swagaliers'" class="fancyimage mtwenty"></a>
     </p>
     <div id="table4"> 
@@ -191,10 +202,10 @@
     <br>
     
 </div>
-<br><br>
+<br>
 <a class="anchor" name="002"></a>
 <!--Page title--> 
-    <h1 id="project-top" align="center" style="margin-right:200px;margin-top:140px; margin-bottom: -4px; font-size:60px">PROJECTS</h1>
+    <h1 class="head-title"id="project-top" align="center">PROJECTS</h1>
 
 <div class="container">
 
@@ -433,7 +444,8 @@
         <img src="./files/button/download.png" style ="margin-right:1px;margin-top:0px;width:20%;"/>
         DOWNLOAD</a>
     </div>
-    
+    <span id="project-bottom"></span>
+
     <div id="content">
         <p><b style="font-size:14px;">Class Team Project - November 2014. </b>  &nbsp;&nbsp;My recent project (for my 'Intro to Computational Media' course) is a variation of the silent game and a tangram drawing program. I worked in a team of four, doing UI UX design and implementation as well as some software development and testing. I also took on the role of coordinating and communicating work deadlines and meetings. Technologies used include Processing (Java) and Photoshop.</p> 
         <p style="text-indent: 0em;"><b>My UI UX design role - </b>  &nbsp;included creating all interface design, sketches, and intial mockups.</p>
@@ -442,7 +454,8 @@
     </div>
 
 
-    <a  id="project-bottom" href ="./files/projects/5/2.png" class="fancybox" rel="gallery5"><img src="./files/projects/5/2.png" style="margin-left: 73px; margin-top:15px;margin-bottom:5px;margin-top:-12px; width:38%;" class="fancyimage"></a>
+
+    <a href ="./files/projects/5/2.png" class="fancybox" rel="gallery5"><img src="./files/projects/5/2.png" style="margin-left: 73px; margin-top:15px;margin-bottom:5px;margin-top:-12px; width:38%;" class="fancyimage"></a>
     <a href ="./files/projects/5/1.png" class="fancybox" rel="gallery5"><img src="./files/projects/5/1.png" style="margin-left: 32px; margin-top:15px;margin-bottom:5px;margin-top:-12px; width:38%;" class="fancyimage"></a>
     <div id="table2"> <ul style="font-size: 18px;"><li>Final P1 Demo</li> <li>Final P2 Demo</li> </ul>
     <div id="table2"> <ul style="font-size: 12px;"><li>Observer Design</li> <li>Builder Design</li></ul>
@@ -470,7 +483,7 @@
 
     <a class="anchor" name="003"></a>
       <!--Page title--> 
-    <h1  id="ux-top"  align="center" style="margin-right:200px; margin-top:140px; margin-bottom: -4px; font-size:60px"><B>UX</B> DESIGN</h1>
+    <h1 class="head-title"  id="ux-top"  align="center"><B>UX</B> DESIGN</h1>
 
 <div class="container" style=" background-image: url(./files/Graphics/tempback.png); background-repeat: no-repeat; background-position: bottom right;">
 
@@ -507,7 +520,7 @@
 
 
 
-     <div id="title"><b>0</b> &nbsp; SOCIAL DECISION POSTER</b>
+ <div id="title"><b>0</b> &nbsp; SOCIAL DECISION POSTER</b>
     <a class="button button-project round-corners" href="https://www.prism.gatech.edu/~mchi6/files/PrototypeDemo.ppsx" target="_blank">
     <div id="buttonResume">
     <img src="./files/button/download.png" style ="margin-top:-1px;width:20%;margin-left:-2px;"/> 
@@ -527,7 +540,7 @@
     <div id="table1"> <ul style="font-size: 12px; margin-left:-10px; "><li>Systems Diagram</li></ul>
     </div>
 
-    <br><br><br><br>
+    <br><br><br><br><br><br>
 
 
      <div id="title"><b>0</b> &nbsp; LEAGUE OF LEGENDS CLIENT <b style='font-size:20px;'>MOBILE</b>
@@ -560,11 +573,11 @@
     </div>
 
 
-    <br><br><br><br><br>
+    <br><br><br><br><br><br><br><br>
 
 
      <div id="title"><b>0</b> &nbsp; PROMOTIONAL VIDEO <b style='font-size:20px;'>SIMPLE STYLE</b>
-    <a class="fancybox fancybox.iframe button button-project round-corners" href="https://www.youtube.com/embed/R_OqwtDcn-g?autoplay=1">
+    <a class="fancybox-video button button-project round-corners" href="https://www.youtube.com/embed/R_OqwtDcn-g?autoplay=1">
     <div id="buttonResume">
     <img src="./files/button/watch.png" style ="margin-top:-1px;width:20%;margin-left:-2px; margin-right:-2px;"/> 
     <span style="font-size:14px;">WATCH NOW</span></div></a>
@@ -574,20 +587,30 @@
     <div id="content" style="margin-top:0px">
         <p style="font-size:14px;"> <b style="font-size:16px;">Storyboard Project - Fall 2015.</b> Full video was created in Adobe Flash.
     </div>
+
+
+
+    <p align="center"><a class="fancybox-video" href="https://www.youtube.com/embed/R_OqwtDcn-g?autoplay=1">
+        <img src="./files/design/watchvideo.png" style="margin-left: 5px;width:80%;border-radius:.4em " class="fancyimage">
+    </a></p>
+    <div id="table1"> <ul style="font-size: 18px; margin-left:-10px;"><b><li>Watch Video</li></b></ul>
+    </div>
+
     <p align="center">
-    <a href="./files/design/1/5.png" class="fancybox" rel="g1"><img src="./files/design/1/5.png" style="margin-top:-12px; margin-left:2px; width:38%" class="fancyimage"></a>
-    <a href="./files/design/1/4.png" class="fancybox" rel="g1"><img src="./files/design/1/4.png" style="margin-top:-12px; margin-left:40px; width:38%" class="fancyimage"></a></p>
-    
+    <a href="./files/design/1/5.png" class="fancybox" rel="g1"><img src="./files/design/1/5.png" style="margin-top:50px; margin-left:2px; width:38%" class="fancyimage"></a>
+    <a href="./files/design/1/4.png" class="fancybox" rel="g1"><img src="./files/design/1/4.png" style="margin-top:50px; margin-left:40px; width:38%" class="fancyimage"></a></p>
+
     <div id="table2"> <ul style="font-size: 18px; "><li>Typography Focus</li> <li>Animated Frames</li> </ul>
     </div>
     <div id="table2"> <ul style="font-size: 12px;"><li>Clear Communication</li> <li>Modern Style</li></ul>
     </div>
-    <br><br><br><br><br>
 
+
+    <br><br><br><br><br><br><br>
 
     <a class="anchor" name="00"></a>
     <div id="title"><b>1</b> &nbsp; PORTFOLIO REEL
-    <a class="fancybox fancybox.iframe button button-project round-corners" href="https://www.youtube.com/embed/pi13iEiXgcU?autoplay=1">
+    <a class="fancybox-video button button-project round-corners" href="https://www.youtube.com/embed/pi13iEiXgcU?autoplay=1">
     <div id="buttonResume">
     <img src="./files/button/watch.png" style ="margin-top:-1px;width:20%;margin-left:-2px; margin-right:-2px;"/> 
     <span style="font-size:14px;">WATCH NOW</span></div></a>
@@ -610,7 +633,7 @@
     <div id="table2"> <ul style="font-size: 12px;"><li>Clear Communication</li> <li>Consistent Animation Flow</li></ul>
     </div>
 
-    <br>
+    <br><br><br>
     <br>
     <br>
     <br>
@@ -830,7 +853,7 @@
     <a href ="./files/design/4/5.png" class="fancybox" rel="gallery4"><img src="./files/design/4/5.png" style="margin-left: 35px; margin-top:40px;margin-bottom:5px;margin-top:50px; width:38%;" class="fancyimage"></a>
     <div id="table2"> <ul style="font-size: 18px;"><li><b>Peace B/W</b> Composition</li> <li><b>Peace B/W</b> Composition</li> </ul></div>
     <div id="table2"> <ul style="font-size: 12px;"><li>Course Assignment</li> <li>Course Assignment</li></ul></div>
-
+    <span id="ux-bottom"></span>
     <a href ="./files/design/4/7.png" class="fancybox" rel="gallery4"><img src="./files/design/4/7.png" style="margin-right:5px;margin-left: 70px; margin-top:40px;margin-bottom:5px;width:38%;" class="fancyimage"></a>
     <a href ="./files/design/4/8.png" class="fancybox" rel="gallery4"><img src="./files/design/4/8.png" style="margin-left: 35px; margin-top:40px;margin-bottom:5px;margin-top:50px; width:38%;" class="fancyimage"></a>
     <div id="table2"> <ul style="font-size: 18px;"><li><b>War B/W</b> Composition</li> <li><b>War B/W</b> Composition</li> </ul></div>
@@ -839,7 +862,7 @@
 
     <br>
     <br>
-    <br  id="ux-bottom">
+    <br>
 
 
     
@@ -853,12 +876,10 @@
 </div>
 
 <br><br>
-<br><br><br>
-<br><br>
 
 <a class="anchor" name="004"></a>
 <!--Page title--> 
-    <h1 align="center" style="margin-right:200px;,margin-top:46px; margin-bottom: -4px; font-size:60px">CONTACT</h1>
+    <h1 class="head-title" align="center">CONTACT</h1>
 
     <div class="container">
 
@@ -874,13 +895,10 @@
 
     </div>
     
-
-
-
     <footer class="footer">
         <p>© 2015 Michael Chi 
-        <br>mchi6@gatech.edu
-        <br>(678) 514-9211</p>
+        <!--<br>mchi6@gatech.edu
+        <br>(678) 514-9211</p>-->
     </footer>
 
     <div class="sideScroll1">
@@ -907,8 +925,6 @@
     </nav>
     </div>
 
-    </div>
-
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!--<script src="./Narrow_files/ie10-viewport-bug-workaround.js"></script>-->
 
@@ -922,12 +938,29 @@
                 fitToView  : true,  
                 openSpeed : 100,
                 closeSpeed : 50,
+                padding: 0,
                 });
 
-            $(".fancybox.iframe").fancybox();
+            $(".fancybox-video").fancybox({
+            'padding'       : 2,
+            'margin'        : [0,40,40,40],
+            'autoScale'     : false,
+            'width'         : '100%',
+            'height'        : '100%',
+                'type'          : 'iframe',
+            'autoPlay'      : false,
+            'playSpeed'     : 10500,
+            closeBtn        : true,
+            iframe : {
+               scrolling : 'no'
+            },
+            helpers     : {
+               title    : { type : 'inside' },
+               buttons  : {}
+            }
+           });
         });
     </script>
-
     <script>
         $(function(){
             $('#menu').slicknav({label: '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; MICHAEL CHI',});
