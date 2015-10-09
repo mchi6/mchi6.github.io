@@ -562,6 +562,11 @@ body {
   font: normal 16px "Ruda", Arial, sans-serif;
   padding-top: 0px;
   padding-bottom: 20px;
+
+  background-image:url(https://www.prism.gatech.edu/~mchi6/github/wallpaper2);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:cover;
 }
 
 .header,
@@ -607,7 +612,7 @@ body {
 @media (min-width: 768px) {
   .container {
   max-width: 750px;
-	background-color: #F1F1F1;
+	background-color: rgba(241,241,241,0.8);
 	border: 1px solid #A5ABB3;
 	padding-top: 50px;
 	padding-bottom: 60px;
