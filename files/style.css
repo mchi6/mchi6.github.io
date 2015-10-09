@@ -5,6 +5,9 @@
 @media screen and (min-width: 0px) { .image-main { width:100%; } }
 @media screen and (min-width: 880px) { .image-main { width:50%;margin-top:20px; } }
 
+@media screen and (min-width: 0px) { .zoom { zoom: 100%; } }
+@media screen and (min-width: 880px) { .zoom { zoom: 120%; } }
+
 
 .head-title {
   margin-right:200px; 
@@ -40,6 +43,7 @@
 }
 
 .slicknav_menu {
+
     display:none;
 }
 
@@ -554,7 +558,7 @@ a.anchor{
 
 
 /* Space out content a bit */
-body {  
+body {
   font: normal 16px "Ruda", Arial, sans-serif;
   padding-top: 0px;
   padding-bottom: 20px;
