@@ -6,7 +6,7 @@
 @media screen and (min-width: 880px) { .image-main { width:50%;margin-top:20px; } }
 
 @media screen and (min-width: 0px) { .zoom { zoom: 100%; } }
-@media screen and (min-width: 880px) { .zoom { zoom: 110%; } }
+@media screen and (min-width: 880px) { .zoom { zoom: 105%; } }
 
 
 .head-title {
