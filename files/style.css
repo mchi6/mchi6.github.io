@@ -4,11 +4,6 @@
 
 @media screen and (min-width: 0px) { .image-main { width:100%; } }
 @media screen and (min-width: 880px) { .image-main { width:60%;margin-top:20px; } }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/master
 
 @media screen and (min-width: 0px) { .zoom { zoom: 100%; } }
 @media screen and (min-width: 880px) { .zoom { zoom: 105%; } }
@@ -30,13 +25,7 @@
   background-repeat: no-repeat;
   padding:0px;
 }
-<<<<<<< HEAD
-/**/
-=======
 
-@media screen and (max-height: 600px) { .background-main {height:100vh;padding-top:100px} } }
-
->>>>>>> origin/master
 .tt { 
   position: relative;
   display: table;
