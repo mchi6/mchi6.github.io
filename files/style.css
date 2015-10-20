@@ -3,7 +3,7 @@
 
 
 @media screen and (min-width: 0px) { .image-main { width:100%; } }
-@media screen and (min-width: 880px) { .image-main { width:50%;margin-top:20px; } }
+@media screen and (min-width: 880px) { .image-main { width:60%;margin-top:20px; } }
 
 @media screen and (min-width: 0px) { .zoom { zoom: 100%; } }
 @media screen and (min-width: 880px) { .zoom { zoom: 105%; } }
@@ -21,9 +21,11 @@
   height: calc(100vh - 61px);
   background-image: url(https://www.prism.gatech.edu/~mchi6/github/bg);
   background-size: cover;
-  
+  background-position: top center;
   background-repeat: no-repeat;
+  padding:0px;
 }
+
 .tt { 
   position: relative;
   display: table;
