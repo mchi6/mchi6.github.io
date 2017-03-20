@@ -1,123 +1,1026 @@
 <!DOCTYPE html>
-<html class="full" lang="en">
-<!-- Make sure the <html> tag is set to the .full CSS class. Change the background image in the full.css file. -->
+
+<!-- Custom Portfolio -->
+<!-- By: Michael Chi  -->
+
+<html lang="en">
 
 <head>
 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    
+    <meta name="viewport" content="width=780">    
+    <!--Additional viewport settings: ' maximum-scale=1,  initial-scale=1, user-scalable=no,'>-->
 
+    <link href="./files/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="./files/bootstrap/bootstrap-theme.min.css" rel="stylesheet">
+
+    <link href="./files/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->    
+
+    <link rel="shortcut icon" href="./files/icon.ico">
     <title>Michael Chi | Portfolio</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/custom-style.css" rel="stylesheet">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <script type="text/javascript" src="./files/js/jquery-2.1.1.min.js"></script>
+    
+    <script type="text/javascript" src="./files/fancybox/lib/mousewheel.js"></script>
+    <script type="text/javascript" src="./files/fancybox/source/jquery.fancybox.js"></script>
+    <link  type="text/css" href="./files/fancybox/source/jquery.fancybox.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="./files/fancybox/source/fancyboxpack.js"></script>
+    <script type="text/javascript" src="./files/fancybox/source/helpers/jquery.fancybox-media.js"></script>
+    <script type="text/javascript" src="./files/fancybox/source/helpers/jquery.fancybox-buttons.js"></script>
+
+    
+    <link rel="stylesheet" href="./files/slicknav/slicknav.css" />
+    <script src="./files/slicknav/jquery.slicknav.min.js"></script>
+    <script src="./files/slicknav/modernizr.min.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).scroll(function() {
+
+            var ptop = $("#project-top").offset().top;
+            var pbot = $("#project-bottom").offset().top;
+            var uxtop = $("#ux-top").offset().top;
+            var uxbot = $("#ux-bottom").offset().top;
+            var y = $(this).scrollTop();
+            if (y > ptop && y < pbot) {
+              $('.sideScroll1').fadeIn();
+            } else {
+              $('.sideScroll1').fadeOut();
+            }
+            if (y > uxtop && y < uxbot) {
+              $('.sideScroll2').fadeIn();
+            } else {
+              $('.sideScroll2').fadeOut();
+            }
+            if (y > 720 && y < 1340) {
+              $('.BG1').fadeIn();
+            } else {
+              $('.BG1').fadeOut();
+            }
+        });
+    </script>
+
+    <script src="./files/js/jquery.sticky.js"></script>
+
+    <script>
+    $(window).load(function(){
+        $("#header").sticky({ topSpacing: 0 });
+    });
+    </script>
+
+
+    <style>
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    a:hover 
+    {
+        color: #444;
+        text-decoration:none; 
+        cursor:pointer;  
+    }
+    </style>
+
 
 </head>
 
 <body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#" style="color:white">MICHAEL CHI</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">ABOUT</a>
-                    </li>
-                    <li>
-                        <a href="#">PROJECTS</a>
-                    </li>
-                    <li>
-                        <a href="./files/ChiMichaelResume.pdf" target="_blank">RESUME</a>
-                    </li>
-                    <li>
-                        <a href="#">CONTACT</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+     <a class="fancybox-video" href="https://www.youtube.com/embed/pi13iEiXgcU?autoplay=1"><div class="container-fluid background-main">
+        <div class="tt">
+            <span class="ttbb">
+        <img src="./files/index/videobutton.png" class="image-main" /></span>
         </div>
-        <!-- /.container -->
+    </div></a>
+
+
+    <!--<nav class="navbar" role="navigation">-->
+    <div id="header" class="header"><div id="innerheader">  
+      <ul class="nav" id ="menu">
+        <li class="titlestyle" >
+            <a href="#" style="padding: 0px;"><h3 align="center">MICHAEL CHI</h3></a>
+        </li>
+        <li id="mobile-show"><a href="#000">HOME</a></li>
+        <li id="m-boost"><a href="#001">ABOUT</a></li>
+        <li><a href="#002">PROJECTS</a></li>
+        <li><a href="#003">UX DESIGN</a></li>
+        <li><a href="#004">CONTACT</a></li>
+      </ul>    
+    </div></div>
     </nav>
+    
 
-    <!-- Page Content -->
-    <!--<div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-12 text-right">
-                <i><h1>Coming Soon.</h1></i>
-                <p></p>
-            </div>
-        </div>
+    <!--<h1 align="center" style="margin-right:50px; margin-bottom: -4px; font-size:60px"></h1>
+
+    <div class="container" style="border:1px solid grey;">
+        <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/pi13iEiXgcU?autoplay=1">
+        <img src="./files/index/videobutton.png" style="width:95%;margin-left:20px;margin-top:-10px;" /></a>
     </div>
-    <!-- /.container -->
+
+    <footer class="footer">
+        <p>Watch Intro Video
+        Above in 1080p</p>
+        <p>© 2015 Michael Chi 
+        <br>mchi6@gatech.edu
+        <br>(678) 514-9211</p>
+    </footer> 
+    <br><br><br><br><br>-->
+<div class="zoom">
+    <a class="anchor" name="000"></a>
+    <br>
+    <a class="anchor" name="001"></a>
+    <h1 align="center" class="head-title">ABOUT ME</h1>
+
+<div class="container">
+
+    <div id="title">WELCOME TO MY PORTFOLIO
+    <a class="button button-project round-corners" href="./resume/index.html" target="_blank">
+    <img src="./files/button/glass.png" style ="margin-top:-1px;width:20%;margin-left:-4px;"/> 
+    <span style="font-size:12px;">VIEW RESUME</span></a>
+    </div>
+    <a class="fancybox" href="./files/about/portrait.png">
+        <img src="./files/about/portrait.png" style="float:right;margin:20px 45px 30px 30px;border: 1px solid grey; border-top-right-radius:.4em;border-bottom-left-radius:.4em;" width="29%"></a>
+    
+    <div id="content">
+        <p> <b style="font-size:15px;">Welcome to my site!!</b>&nbsp;&nbsp;My name is Michael Chi! I am 
+        currently a 3rd student at the Georgia Institute of Technology studying Computational 
+        Media. Some of my personal strengths include active in working both solo and with teams and confidence in 
+        speech. I have strong skills in the areas of application/software development, web development, game design, graphic design, and UI/UX design.</p>
+        
+        <p><b style="font-size:15px;">Making cool stuff.</b> &nbsp;&nbsp;I always enjoy spending a lot of my free time working on various projects as well as find ways daily to help improve my skills and creative thinking.
+        Inside my portfolio you will find projects that I have worked on in both solo and team environments. I been have working with graphic design for the past six to seven years and have been both writing applications as well as creating websites for the past five to six years.
+        </p>
+    </div>
+    
+    <br>
+
+    <div id="title">COMPUTATIONAL MEDIA UNDERGRAD</div>
+    <div id="content">
+        <p><b style="font-size:15px;">As a Student.</b>  &nbsp;&nbsp;I am currently studying Computational Media. This major focuses significantly not only on hands-on and theoretical knowledge of computing but also an understanding of visual design and the history of media. I am very passionate about learning new technologies and try to explore new things every day! I am currently interning for the Emory School of Medicine, creating a multimedia tool to teach basic science concepts to medical students. This tool will be web-based, mobile-centric, and in responsive HTML5. 
+        </p>
+        
+        <p> <b style="font-size:15px;">Other Activities.</b> &nbsp;&nbsp; I enjoy many other activities including hip-hop dance, video games, movies, basketball, working out/running, piano, violin, magic tricks, card/board games, and hanging with my friends. I am currently the promotion's officer for Georgia Tech's Chinese Student Association, coordinating events and creating all of the organization's advertisements and designs. I am also a dance team member in a group called Impact and a magician in Georgia Tech's Magicians Organization. I love to perform with lots of passion and learn new things!
+        </p>
+    </div>
+
+    <p style="padding: 10px 20px; margin-bottom:-11px;">
+    <a class="fancybox" href="https://www.facebook.com/gatechcsa" target="_blank">
+        <img src="./files/about/1.png" atl="Chinese Student Association" style="margin-left:28px" class="fancyimage"></a>
+    <a href="https://www.youtube.com/watch?v=DDHrBqZl2N8&feature=youtu.be&t=0m52s" target="_blank">
+        <img src="./files/about/2.png" atl="GT Magicians" class="fancyimage mtwenty"></a>
+    <a href="https://www.youtube.com/watch?v=5zxQfAhl2Ac&feature=youtu.be&t=22m25s" target="_blank">
+        <img src="./files/about/3.png" atl="Hip-Hop Dance Team 'Impact'" class="fancyimage mtwenty"></a>
+    <a class="fancybox" href="./files/about/photo4.jpg" rel="ggggg">
+        <img src="./files/about/4.png" atl="Intramural Basketball Team 'Swagaliers'" class="fancyimage mtwenty"></a>
+    </p>
+    <div id="table4"> 
+    <ul style="font-size: 18px;margin-left:7px;">
+        <a class="fancybox" href="https://www.facebook.com/gatechcsa" target="_blank">
+            <li style="padding-right:7px;">CULTURE</li></a>
+        <a class="fancybox" href="https://www.youtube.com/watch?v=DDHrBqZl2N8&feature=youtu.be&t=0m52s" target="_blank">
+            <li>MAGIC</li></a>
+        <a href="https://www.youtube.com/watch?v=5zxQfAhl2Ac&feature=youtu.be&t=22m25s" target="_blank">
+            <li>DANCE</li></a>
+        <a class="fancybox" href="./files/about/Photo4.png" rel="gallery">
+            <li>BASKETBALL</li></a>
+    </ul>
+    </div>
+    <div id="table4"> <ul style="font-size: 12px;margin-left:5px;"><li>Chinese Student Assoc.</li> <li>Georgia Tech Magicians</li> <li>Hip-Hop Dance Team</li> <li>Intramural Basketball Team</li> </ul>
+    </div>
+
+    <br>
+    <br>
+    
+</div>
+<br>
+<a class="anchor" name="002"></a>
+<!--Page title--> 
+    <h1 class="head-title"id="project-top" align="center">PROJECTS</h1>
+
+<div class="container">
+
+    <div id="title">DEVELOPMENT AND DESIGN</div>
+
+    <div id="content" style="margin-right:-10px;margin-left:-15px;">
+    <a class="button button-main round-corners" href="#0" style="background-image: url('./files/projects/button/1.png');">
+        <div id="main"><span class="mNumber"> 1 </span><span class="mName"> MY PORTFOLIO</span></div>
+    </a>
+
+    <a class="button button-main round-corners" href="#1" style="background-image: url('./files/projects/button/2.png');">
+        <div id="main"><span class="mNumber"> 2 </span><span class="mName"> BUSINESS OR BUST</span></div>
+    </a>
+
+    <a class="button button-main round-corners" href="#2" style="background-image: url('./files/projects/button/3.png');">
+        <div id="main"><span class="mNumber"> 3 </span><span class="mName"> GRADYOUNATION</span></div>
+    </a>
+
+    <p style="margin-top:-3px"></p>
+
+    <a class="button button-main round-corners" href="#3" style="background-image: url('./files/projects/button/4.png');">
+        <div id="main"><span class="mNumber"> 4 </span><span class="mName"> VG DEV</span></div>
+    </a>
+
+    <a class="button button-main round-corners" href="#4" style="background-image: url('./files/projects/button/5.png');">
+        <div id="main"><span class="mNumber"> 5 </span><span class="mName"> TGBUILD</span></div>
+    </a>
+
+    <a class="button button-main round-corners" style="box-shadow: 0px 0px 0px black;background:#F1F1F1;border:1px solid rgba(116, 120, 125, 0.52)">
+        <div id="main"><span style="font-size:13px;">MORE TO COME</span></div></a>
+    </div>
+
+    <!--<div id="content">
+    <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/pi13iEiXgcU?autoplay=1">
+    <img src="./files/videotemp3.png" style="width:88%; margin-left:47px; margin-bottom:-15px;margin-top:10px;border:1px solid gray; border-top-right-radius:.4em;border-bottom-left-radius:.4em;box-shadow: 1px 1px .5px #626262;" /></a>
+    </div>-->
+
+    <div id="content" style="margin-top:-15px;">
+        <p style="font-size:14px;"> <b style="font-size:15px;">My Passion for Software/Web Development and Design!</b>&nbsp;&nbsp; In this section, I will be sharing my current and past projects I have worked on within both solo and team environments. I am really passioniate about my work, so feel free to ask me questions about anything!</b> </p>
+    </div>
+
+    <br><br><br>
 
 
-    <header id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-        <!--
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol> -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <div class="fill" style="background-image:url('http://www.prism.gatech.edu/~mchi6/mchi6/photos/background1.jpg'); background-position: right center;">
-                    <!--<div class="container">
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12 text-right" style="margin-top:50px">
-                                <i><h1>Coming Soon.</h1></i>
-                            </div>
-                        </div>
-                    </div>-->
-                </div>
-            </div>
-            <div class="item">
-                <div class="fill" style="background-image:url('http://www.prism.gatech.edu/~mchi6/mchi6/photos/background2.jpg'); background-position: center center;"></div>
-                </div>
-            <div class="item">
-                <div class="fill" style="background-image:url('http://www.prism.gatech.edu/~mchi6/mchi6/photos/background3.jpg'); background-position: bottom center;"></div>
-                </div>
+    <div id="title"><b>0</b> &nbsp; INTERNSHIP AT EMORY &nbsp;<span style='font-size:24px;'>2015</span>
+    <a class="button button-project round-corners" href="http://staging.web.emory.edu/breakthroughs" target="_blank">
+         <img src="./files/button/glass.png" style ="margin-top:-1px;width:20%;margin-left:-4px;"/> 
+        <span style="font-size:12px;">VIEW DEMO</span></a>
+    </div>
+    <div id="content" style="margin-top:0px">
+        <!--<a class="fancybox" href="./files/design/1/2.png">
+            <img src="./files/design/1/2.png" style="width:40%;float:right;margin-left:15px;margin-right:-5px;" class="fancyimage" />
+        </a>-->
+        <p> <b style="font-size:15px;">Current Internship - Present.&nbsp;&nbsp; </b>See Resume for details. View website demo - button above.
+            <br>Currently working solo on complete website design and technical development. This included research for user experience, understanding platform compabilitiy (desktop to mobile look), necessary technology (all frameworks/libraries are cool, but not necessary), and proper implementation.
+            <br>There are weekly meetings and images and content is provided. Work is done remotely along side with school and other jobs.</p> 
+    </div>
+    <br>
+
+
+    <div id="title"><b>0</b> &nbsp; INTERNSHIP AT IBM &nbsp;<span style='font-size:24px;'>SUMMER 2015</span>
+    <a class="button button-project round-corners" href="http://www-01.ibm.com/software/data/infosphere/hadoop/" target="_blank">
+         <img src="./files/button/glass.png" style ="margin-top:-1px;width:20%;margin-left:-4px;"/> 
+        <span style="font-size:12px;">IBM HADOOP</span></a>
+    </div>
+    <div id="content" style="margin-top:0px">
+        <!--<a class="fancybox" href="./files/design/1/2.png">
+            <img src="./files/design/1/2.png" style="width:40%;float:right;margin-left:15px;margin-right:-5px;" class="fancyimage" />
+        </a>-->
+        <p> <b style="font-size:15px;">Software Developer Internship - 2015.&nbsp;&nbsp; </b> <a href="./resume/index.html" target="_blank">See Resume for details (Click Here).</a>
+    </div>
+    <br>
+
+    <a class="anchor" name="0"></a>
+
+    <!--=======================================================================================             1 title          =======-->
+    <div id="title"><b>1</b> &nbsp; MY PORTFOLIO &nbsp;<span style='font-size:24px;'>2014-15</span>
+    <a class="button button-project round-corners" href="https://www.prism.gatech.edu/~mchi6/Old/index.html" target="_blank">
+         <img src="./files/button/glass.png" style ="margin-top:-1px;width:20%;margin-left:-4px;"/> 
+        <span style="font-size:12px;">VIEW 2013-14</span></a>
+    </div>
+
+    <div id="content">
+        <p> <b style="font-size:15px;">New and Updated - November 2014.&nbsp;&nbsp; </b>Portfolio updated often!
+        This site is custom designed and developed by me and built through a mobile-first environment, using HTML, CSS, JavaScript, and JQuery. Website markup and script written in Sublime Text and Adobe DreamWeaver.</p>
+
+        <p style="text-indent: 0em;">Improvements include: <b> removed </b> Flash banner (not mobile supported), <b>less </b> images <b>more</b> CSS (load faster on mobile), <b>removed</b> iFrame (unreliable navigation), <b>used</b> mobile-first build (use of BootStrap), <b>improved</b> navigation (less clicking more viewing), and <b>more focus</b> on content (subheader design). </p>
+
+
+
+        <a href ="./files/projects/1/10.png" class="fancybox" rel="gallery1"><img src="./files/projects/1/1.png" style="margin-right:5px; margin-left: 12px; margin-top:10px;margin-bottom:20px; width:45%; opacity:.95;" class="fancyimage" /></a>
+        <b style="font-size:25px;">→</b>
+        <a href ="./files/projects/1/20.png" class="fancybox" rel="gallery1"><img src="./files/projects/1/2.png" style="margin-left:5px; margin-top:10px;margin-bottom:20px; width:45%; opacity:.95;" class="fancyimage" /></a>
+
+
+      </div>
+    <div id="table2" style="margin-left:1px;"> <ul style="font-size: 18px; margin-top:-40px;"><li>Portfolio 2013-14 </li> <li>Portfolio 2014-15</li> </ul>
+    </div>
+    <div id="table2" style="margin-left:1px;"> <ul style="font-size: 12px;"><li><b>Old</b> Design</li> <li><b>New</b> Design</li></ul>
+    </div>
+    <!--<a style="margin-left:230px;margin-top:20px;" class="button button-project round-corners" href="./Old/index.html" target="_blank"><ul style="margin-left:-30px;"><div id="buttonResume">VIEW <span style='font-size:1.1em;'>OLD</span> PORTFOLIO</div></ul></a>
+    <a style="margin-left:30px;margin-top:20px;" class="button button-project round-corners" href="./graphics.html#1" target="_blank"><ul style="margin-left:-30px;"><div id="buttonResume">VIEW NEW UX DESIGN</div></ul></a>-->
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <a class="anchor" name="1"></a>
+
+    <!--=======================================================================================             2 title          =======-->
+
+
+    <div id="title"><b>2</b> &nbsp; BUSINESS OR BUST &nbsp;<span style='font-size:24px;'>TRIVIA GAME</span>
+    <a class="button button-project round-corners" href="https://www.prism.gatech.edu/~mchi6/Old/Files/vgFiles/BusinessOrBust.zip" target="_blank">
+        <img src="./files/button/download.png" style ="margin-right:1px;margin-top:0px;width:20%;"/>
+        DOWNLOAD</a>
+    </div>
+
+    <div id="content">
+        <p> <b style="font-size:15px;">FBLA Project - June 2013. </b>&nbsp;&nbsp; This was a solo designed, solo developed video game. The Powerpoint presentation was created with a partner. It was my entry for the 2013 FBLA competition in Computer Game and Simulation Programming, which placed 1st in the State divison and 3rd place in the National division. The game was designed in Adobe Flash and Adobe Photoshop and built in GameMaker (Object Oriented).</b> </p>
+    </div>
+    
+    <p align="center">
+        <a href="./files/projects/2/1.png" class="fancybox" rel="gallery2"><img src="./files/projects/2/1.png" style="margin-top:-12px; width:38%" class="fancyimage"></a>
+        <a href="./files/projects/2/2.png" class="fancybox" rel="gallery2"><img src="./files/projects/2/2.png" style="margin-top:-12px; margin-left:30px; width:38%" class="fancyimage"></a></p>
+  
+    <div id="table2"> <ul style="font-size: 18px; "><li>Title Menu</li> <li>Gameplay Screen</li> </ul>
+    </div>
+    <div id="table2"> <ul style="font-size: 12px;"><li>Easy Navigation</li> <li>Focus on Fluid Gameplay</li></ul>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <a class="anchor" name="2"></a>
+
+    <!--=======================================================================================             3 title          =======-->
+
+      <div id="title"><b>3</b> &nbsp; GRADYOUNATION &nbsp;<span style='font-size:24px;'>ONLINE STORE</span>
+    <a class="button button-project round-corners" href="https://www.prism.gatech.edu/~mchi6/Old/Files/websiteFiles/gradyounation/GradYouNationHome.html" target="_blank">
+        <img src="./files/button/glass.png" style ="margin-top:-1px;width:20%;"/> 
+        VIEW SITE</a>
+      </div>
+
+    <div id="content">
+        <p> <b style="font-size:15px;">FBLA Project - June 2013. </b>&nbsp;&nbsp; This was my team project (group of 3) with for the E-Business competition at the FBLA State and National Conferences and placed 1st at the state level and 5th at the national level. Website was made with a partner in HTML, CSS, and JS and designed in Photoshop. <b> Google CheckOut was used for purchasing. This feature is not supported by Google anymore and site will be updated.</b> </p>
+    </div>
+    
+    <p align="center">
+        <a href="./files/projects/3/1.png" class="fancybox" rel="gallery3"><img src="./files/projects/3/1.png" style="margin-top:-12px;width:38%" class="fancyimage"></a>
+        <a href="./files/projects/3/2.png" class="fancybox" rel="gallery3"><img src="./files/projects/3/2.png" style="margin-top:-12px; margin-left:30px; width:38%" class="fancyimage"></a></p>
+  
+    <div id="table2"> <ul style="font-size: 18px; "><li>Homepage</li> <li>Store Screen</li> </ul>
+    </div>
+    <div id="table2"> <ul style="font-size: 12px;"><li>Easy Navigation</li> <li>Easy to Purchase</li></ul>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <a class="anchor" name="3"></a>
+
+    <!--=======================================================================================             4 title          =======-->
+
+
+    <div id="title"><b>4</b> &nbsp; VG DEV &nbsp;<span style='font-size:24px;'>CAMPUS ORGANIZATION</span>
+    <a class="button button-project round-corners" href="http://www.vgdev.org/games/index.php?withDev=171" target="_blank">
+         <img src="./files/button/glass.png" style ="margin-top:-1px;width:20%;"/> 
+        VIEW GAMES</a>
+    </div>
+
+    <div id="content">
+        <p> <b style="font-size:15px;">Current Organization - 2014-15. </b>&nbsp;&nbsp; </b>  I am currently a member of Georgia Tech's Video Game Development Organization. Below are the two completed projects I worked on with some teams. I found working on these teams challenging at times but always enjoyable and worthwhile, and it's something I would really like to continue doing!</p>
+    </div>
+    
+    <div id="content" style="margin-top:-22px;">
+        <p style="text-indent: 0em;"> <b style="font-size:14px;"><span style="font-size:17px;">PERSPECTIVE</span> Game - October 2014. </b>&nbsp;&nbsp; This is a Georgia Tech Video Game Development project I worked on in a team of 7 members. I was the creative designer behind the menu UI and worked on the technical implementation (with other team members).</b> </p>
+    </div>
+    
+
+      <p align="center">
+        <a href="./files/projects/4/P1.png" class="fancybox" rel="gallery4"><img src="./files/projects/4/P1.png" style="margin-top:-12px; margin-left:30px; width:38%" class="fancyimage"></a>
+        <a href="./files/projects/4/P2.png" class="fancybox" rel="gallery4"><img src="./files/projects/4/P2.png" style="margin-top:-12px; margin-left:30px; width:38%" class="fancyimage"></a></p>
+  
+    <div id="table2"> <ul style="font-size: 18px; "><li>Title Menu</li> <li>Pause Screen</li> </ul>
+    </div>
+    <div id="table2"> <ul style="font-size: 12px;"><li>3D Menu System</li> <li>Fluid Transitioning</li></ul>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div id="content">
+        <!--<p> <b style="font-size:15px;">GT Video Game Dev Project - March 2014. </b>&nbsp;&nbsp This is a Georgia Tech Video Game Development project I worked on in a team of 15 members. I created the main menu UI design in Photoshop and then transfered each individual image (buttons, titles, animations) into Unity for implementation. The game's full name is Super Wacky Fast Time Fun Time Madness.</b> </p>-->
+        <p style="text-indent: 0em;"> <b style="font-size:14px;"><span style="font-size:17px;">SWFTFM</span> Game - March 2014. </b>&nbsp;&nbsp; This is a Georgia Tech Video Game Development project I worked on in a team of 15 members. I created the main menu UI design in Adobe Photoshop and Flash and then transfered each individual image (buttons, titles, animations) into Unity for implementation. The game's full name is Super Wacky Fast Time Fun Time Madness.</b> </p>
+    </div>
+    
+    <p align="center"><a href="./files/projects/4/S1.png" class="fancybox">
+        <img src="./files/projects/4/S1.png" style="margin-left: 5px;margin-top:-12px; width:60%;" class="fancyimage">
+    </a></p>
+  
+    <div id="table1"> <ul style="font-size: 18px; margin-left:-10px; "><li>Title Menu</li> </ul>
+    </div>
+    <div id="table1"> <ul style="font-size: 12px; margin-left:-10px; "><li>Fluid Animation and Easy Navigation</li></ul>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <a class="anchor" name="4"></a>
+
+    <!--=======================================================================================             5 title          =======-->
+
+
+    <div id="title"><b>5</b> &nbsp; TGBUILD  &nbsp;<span style='font-size:24px;'>ART PROGRAM</span>
+    <a class="button button-project round-corners" href="https://www.prism.gatech.edu/~mchi6/files/TGBuild32Bit.zip" target="_blank">
+        <img src="./files/button/download.png" style ="margin-right:1px;margin-top:0px;width:20%;"/>
+        DOWNLOAD</a>
+    </div>
+    <span id="project-bottom"></span>
+
+    <div id="content">
+        <p><b style="font-size:14px;">Class Team Project - November 2014. </b>  &nbsp;&nbsp;My recent project (for my 'Intro to Computational Media' course) is a variation of the silent game and a tangram drawing program. I worked in a team of four, doing UI UX design and implementation as well as some software development and testing. I also took on the role of coordinating and communicating work deadlines and meetings. Technologies used include Processing (Java) and Photoshop.</p> 
+        <p style="text-indent: 0em;"><b>My UI UX design role - </b>  &nbsp;included creating all interface design, sketches, and intial mockups.</p>
+        <p style="text-indent: 0em;"><b>My software development role - </b> &nbsp;included creating front-end code, timer implementation, level transition, and some object properties.</p>
+        <!--<p style="text-indent: 0em;">Below, improvements from V1 to V2 include: <b> Cleaner color scheme, toolbars more defined, style is kept throughout interface, less button clicking, and better presentation of information. </b> Processing and Photoshop was used.</p>-->
+    </div>
+
+
+
+    <a href ="./files/projects/5/2.png" class="fancybox" rel="gallery5"><img src="./files/projects/5/2.png" style="margin-left: 73px; margin-top:15px;margin-bottom:5px;margin-top:-12px; width:38%;" class="fancyimage"></a>
+    <a href ="./files/projects/5/1.png" class="fancybox" rel="gallery5"><img src="./files/projects/5/1.png" style="margin-left: 32px; margin-top:15px;margin-bottom:5px;margin-top:-12px; width:38%;" class="fancyimage"></a>
+    <div id="table2"> <ul style="font-size: 18px;"><li>Final P1 Demo</li> <li>Final P2 Demo</li> </ul>
+    <div id="table2"> <ul style="font-size: 12px;"><li>Observer Design</li> <li>Builder Design</li></ul>
+    </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <!--<a style="margin-left:230px;margin-top:20px;" class="button button-project round-corners" href="./files/TGBuild64Bit.zip" target="_blank"><ul style="margin-left:-30px;"><div id="buttonResume">PLAY THE DEMO <b style='font-size:20px;'>(64 BIT)</b></div></ul></a>
+
+    <br>
+
+    <a style="margin-left:230px;margin-top:20px;" class="button button-project round-corners" href="./files/TGBuild32Bit.zip" target="_blank"><ul style="margin-left:-30px;"><div id="buttonResume">PLAY THE DEMO <b style='font-size:20px;'>(32 BIT)</b></div></ul></a>-->
+
+
+    <!--<a style="margin-left:230px;margin-top:20px;" class="button button-project round-corners" href="./files/TGBuild32Bit.zip" target="_blank"><ul style="margin-left:-30px;"><div id="buttonResume">PLAY THE DEMO</div></ul></a>
+
+    <br>
+    <br>
+    <br>-->
+
+</div>
+    <br><br>
+
+    <a class="anchor" name="003"></a>
+      <!--Page title--> 
+    <h1 class="head-title"  id="ux-top"  align="center"><B>UX</B> DESIGN</h1>
+
+<div class="container" style=" background-image: url(./files/Graphics/tempback.png); background-repeat: no-repeat; background-position: bottom right;">
+
+    <div id="title"> USER INTERFACE AND EXPERIENCE  <!--&nbsp;<b style='font-size:20px;'>(UNDER CONSTRUCTION)</b>--></div>
+
+    <div id="content">
+    <script type="text/javascript">
+    $(function(){
+        /*$('.fadein img:gt(0)').hide();
+        setInterval(function(){
+          $('.fadein :first-child').fadeOut()
+             .next('img').fadeIn()
+             .end().appendTo('.fadein');},
+          4000);
+    });*/
+    $('.fadelinks > :gt(0)').hide();
+      setInterval(function(){
+        $('.fadelinks > :first-child').fadeOut()
+         .next().fadeIn().end()
+         .appendTo('.fadelinks');
+      }, 4000);
+    });
+    </script>
+    <div class="fadelinks">
+    <a href="#1"><img src="./files/design/button/1.png" alt="Portfolio Intro" title="Portfolio Design" style="opacity:0.9;"></a>
+    <a href="#2"><img src="./files/design/button/2.png" alt="TGBuild Intro" title="TGBuild Design" style="opacity:0.9;"></a>
+    </div>
+    </div>
+    <div id="content">
+        <p style="font-size:14px;"> <b style="font-size:15px;">My Passion for UI/UX Design!</b>&nbsp;&nbsp; I do not only have a love for creative design but also a love for design that can applied to something that matters! In this section, I will further share my design process and decision making. I will include more sketches and mockups of various projects as well as communicate my choices made throughout the development process.
+        </p>
+    </div>
+    <br><br><br>
+
+
+
+ <div id="title"><b>0</b> &nbsp; SOCIAL DECISION POSTER</b>
+    <a class="button button-project round-corners" href="https://www.prism.gatech.edu/~mchi6/LeagueSystemsDiagram.jpg" target="_blank">
+    <div id="buttonResume">
+    <img src="./files/button/download.png" style ="margin-top:-1px;width:20%;margin-left:-2px;"/> 
+    <span style="font-size:11px;">DL IMAGE</span></div></a></div>
+
+
+    <div id="content" style="margin-top:0px">
+        <p style="font-size:14px;"> <b style="font-size:16px;">Systems Diagram Project - Fall 2015.</b> Designed a social decision tree for nonprofessional League of Legends players. Made in Photoshop.
+    </div>
+
+    <p align="center"><a href="https://www.prism.gatech.edu/~mchi6/LeagueSystemsDiagram.jpg" class="fancybox">
+        <img src="https://www.prism.gatech.edu/~mchi6/LeagueSystemsDiagram.jpg" style="margin-left: 5px;margin-top:-12px; width:60%;" class="fancyimage">
+    </a></p>
+  
+    <div id="table1"> <ul style="font-size: 18px; margin-left:-10px; "><li>Decision Tree</li> </ul>
+    </div>
+    <div id="table1"> <ul style="font-size: 12px; margin-left:-10px; "><li>Systems Diagram</li></ul>
+    </div>
+
+    <br><br><br><br><br><br>
+
+    <a class="anchor" name="leaguemobile"></a>
+     <div id="title"><b>0</b> &nbsp; LEAGUE OF LEGENDS CLIENT <b style='font-size:20px;'>MOBILE</b>
+    <a class="button button-project round-corners" href="https://www.prism.gatech.edu/~mchi6/LoLPrototype.ppsx" target="_blank">
+    <div id="buttonResume">
+    <img src="./files/button/download.png" style ="margin-top:-1px;width:20%;margin-left:-2px;"/> 
+    <span style="font-size:11px;">DL PROTOTYPE</span></div></a></div>
+
+
+    <div id="content" style="margin-top:0px">
+        <p style="font-size:14px;"> <b style="font-size:16px;">Prototype Project - Fall 2015.</b> Prototype made in Photoshop and presented in Powerpoint
+    </div>
+    <p align="center">
+    <a href="./files/design/1/9.png" class="fancybox" rel="gg0"><img src="./files/design/1/9.png" style="margin-top:-12px; margin-left:2px; width:38%" class="fancyimage"></a>
+    <a href="./files/design/1/8.png" class="fancybox" rel="g0"><img src="./files/design/1/8.png" style="margin-top:-12px; margin-left:40px; width:38%" class="fancyimage"></a></p>
+    
+    <div id="table2"> <ul style="font-size: 18px; "><li>Login Screen</li> <li>Main Menu</li> </ul>
+    </div>
+    <div id="table2"> <ul style="font-size: 12px;"><li>Simple</li> <li>Function focused</li></ul>
+    </div>
+
+    <br><br><br><br>
+    <p align="center">
+    <a href="./files/design/1/6.png" class="fancybox" rel="gg0"><img src="./files/design/1/6.png" style="margin-top:-12px; margin-left:2px; width:38%" class="fancyimage"></a>
+    <a href="./files/design/1/7.png" class="fancybox" rel="gg0"><img src="./files/design/1/7.png" style="margin-top:-12px; margin-left:40px; width:38%" class="fancyimage"></a></p>
+    
+    <div id="table2"> <ul style="font-size: 18px; "><li>Champion Menu</li> <li>Champion Window</li> </ul>
+    </div>
+    <div id="table2"> <ul style="font-size: 12px;"><li>Use of Screen Space</li> <li>Easy Navigation</li></ul>
+    </div>
+
+
+    <br><br><br><br><br><br><br><br>
+
+
+     <div id="title"><b>0</b> &nbsp; TECHNOLOGY VIDEO <b style='font-size:20px;'>PROMO VID</b>
+    <a class="fancybox-video button button-project round-corners" href="https://www.youtube.com/embed/R_OqwtDcn-g?autoplay=1">
+    <div id="buttonResume">
+    <img src="./files/button/watch.png" style ="margin-top:-1px;width:20%;margin-left:-2px; margin-right:-2px;"/> 
+    <span style="font-size:14px;">WATCH NOW</span></div></a>
+    </div>
+
+
+    <div id="content" style="margin-top:0px">
+        <p style="font-size:14px;"> <b style="font-size:16px;">Storyboard Project - Fall 2015.</b> Full video was created in Adobe Flash.
+    </div>
+
+
+
+    <p align="center"><a class="fancybox-video" href="https://www.youtube.com/embed/R_OqwtDcn-g?autoplay=1">
+        <img src="./files/design/watchvideo.png" style="margin-left: 5px;width:80%;border-radius:.4em " class="fancyimage">
+    </a></p>
+    <div id="table1"> <ul style="font-size: 18px; margin-left:-10px;"><b><li>Watch Video</li></b></ul>
+    </div>
+
+    <p align="center">
+    <a href="./files/design/1/5.png" class="fancybox" rel="g1"><img src="./files/design/1/5.png" style="margin-top:50px; margin-left:2px; width:38%" class="fancyimage"></a>
+    <a href="./files/design/1/4.png" class="fancybox" rel="g1"><img src="./files/design/1/4.png" style="margin-top:50px; margin-left:40px; width:38%" class="fancyimage"></a></p>
+
+    <div id="table2"> <ul style="font-size: 18px; "><li>Typography Focus</li> <li>Animated Frames</li> </ul>
+    </div>
+    <div id="table2"> <ul style="font-size: 12px;"><li>Clear Communication</li> <li>Modern Style</li></ul>
+    </div>
+
+
+    <br><br><br><br><br><br><br>
+
+
+
+     <div id="title"><b>0</b> &nbsp; IBM VIDEO <b style='font-size:20px;'>PROMO VID</b>
+    <a class="fancybox-video button button-project round-corners" href="https://www.youtube.com/embed/R_OqwtDcn-g?autoplay=1">
+    <div id="buttonResume">
+    <img src="./files/button/watch.png" style ="margin-top:-1px;width:20%;margin-left:-2px; margin-right:-2px;"/> 
+    <span style="font-size:14px;">WATCH NOW</span></div></a>
+    </div>
+
+
+    <div id="content" style="margin-top:0px">
+        <p style="font-size:14px;"> <b style="font-size:16px;">Video Entree - Summer 2015.</b> Made during my internship at IBM and competing/won in a video competition. Full video was created in Adobe Flash.
+    </div>
+
+
+
+    <p align="center"><a class="fancybox-video" href="https://www.youtube.com/embed/unbHSDSvLR8?autoplay=1">
+        <img src="./files/design/watchvideo3.png" style="margin-left: 5px;width:80%;border-radius:.4em " class="fancyimage">
+    </a></p>
+    <div id="table1"> <ul style="font-size: 18px; margin-left:-10px;"><b><li>Watch Video</li></b></ul>
+    </div>
+
+    <p align="center">
+    <a href="./files/design/1/10.png" class="fancybox" rel="g1"><img src="./files/design/1/10.png" style="margin-top:50px; margin-left:2px; width:38%" class="fancyimage"></a>
+    <a href="./files/design/1/11.png" class="fancybox" rel="g1"><img src="./files/design/1/11.png" style="margin-top:50px; margin-left:40px; width:38%" class="fancyimage"></a></p>
+
+    <div id="table2"> <ul style="font-size: 18px; "><li>Typography Focus</li> <li>Animated Transitions</li> </ul>
+    </div>
+    <div id="table2"> <ul style="font-size: 12px;"><li>Clear Communication</li> <li>Fluid Flow</li></ul>
+    </div>
+
+
+    <br><br><br><br><br><br><br>
+
+
+
+    <a class="anchor" name="00"></a>
+    <div id="title"><b>1</b> &nbsp; PORTFOLIO REEL
+    <a class="fancybox-video button button-project round-corners" href="https://www.youtube.com/embed/pi13iEiXgcU?autoplay=1">
+    <div id="buttonResume">
+    <img src="./files/button/watch.png" style ="margin-top:-1px;width:20%;margin-left:-2px; margin-right:-2px;"/> 
+    <span style="font-size:14px;">WATCH NOW</span></div></a>
+    </div>
+
+    <div id="content" style="margin-top:0px">
+        <!--<a class="fancybox" href="./files/design/1/2.png">
+            <img src="./files/design/1/2.png" style="width:40%;float:right;margin-left:15px;margin-right:-5px;" class="fancyimage" />
+        </a>-->
+        <p style="font-size:14px;"> <b style="font-size:16px;">Flash Animation Project - December 2014. </b> This is my recently completed project done outside of school, which is to showcase my projects in a quick and concise introduction video. I also focused on improving my skills in motion and overall design. <b>Full video was created in Adobe Flash.</b> 
+        <br>The image to the right shows animated frames in Flash.
+    </div>
+
+
+    <p align="center"><a class="fancybox-video" href="https://www.youtube.com/embed/pi13iEiXgcU?autoplay=1">
+        <img src="./files/design/watchvideo2.png" style="margin-left: 5px;width:80%;border-radius:.4em " class="fancyimage">
+    </a></p>
+    <div id="table1"> <ul style="font-size: 18px; margin-left:-10px;"><b><li>Watch Video</li></b></ul>
+    </div>
+
+    <p align="center">
+    <a href="./files/design/1/3.png" class="fancybox" rel="g1"><img src="./files/design/1/3.png" style="margin-top:50px; margin-left:2px; width:38%" class="fancyimage"></a>
+    <a href="./files/design/1/2.png" class="fancybox" rel="g1"><img src="./files/design/1/2.png" style="margin-top:50px; margin-left:40px; width:38%" class="fancyimage"></a></p>
+    
+    <div id="table2"> <ul style="font-size: 18px; "><li>Typography Focus</li> <li>Animated Frames</li> </ul>
+    </div>
+    <div id="table2"> <ul style="font-size: 12px;"><li>Clear Communication</li> <li>Consistent Animation Flow</li></ul>
+    </div>
+
+    <br><br><br>
+    <br>
+    <br>
+    <br>
+
+
+
+    <a class="anchor" name="01"></a>
+    <div id="title"><b>2</b> &nbsp; SHOPPING WITH FRIENDS <b style='font-size:20px;'>ANDROID</b>
+    <a class="button button-project round-corners" href="https://www.prism.gatech.edu/~mchi6/files/PrototypeDemo.ppsx" target="_blank">
+    <div id="buttonResume">
+    <img src="./files/button/download.png" style ="margin-top:-1px;width:20%;margin-left:-2px;"/> 
+        <span style="font-size:11px;">DL PROTOTYPE</span></div></a>
+    
+</div>
+
+    <div id="content" style="margin-top:0px">
+        <!--<a class="fancybox" href="./files/design/1/2.png">
+            <img src="./files/design/1/2.png" style="width:40%;float:right;margin-left:15px;margin-right:-5px;" class="fancyimage" />
+        </a>-->
+        <p style="font-size:14px;"> <b style="font-size:16px;">Current Project - Present. </b> Creating an social network application that makes buying and finding items simple and quick. This is a team project (with 4 other members), and I am currently working as the <b><u>solo</u> Project Manager as well as the <u>solo</u> UX Designer and team Software Designer (end to end production)</b>. I created all the graphics/mockups below. Using Photoshop, Powerpoint, Fluid UI, and Android Studio (Java).
+    </div>
+
+    <p align="center">
+    <a href="./files/design/5/1.png" class="fancybox" rel="g0"><img src="./files/design/5/1.png" style="margin-top:-12px; margin-left:2px; width:38%" class="fancyimage"></a>
+    <a href="./files/design/5/2.png" class="fancybox" rel="g0"><img src="./files/design/5/2.png" style="margin-top:-12px; margin-left:40px; width:38%" class="fancyimage"></a></p>
+    
+    <div id="table2"> <ul style="font-size: 18px; "><li>Log In</li> <li>Register</li> </ul>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <p align="center">
+    <a href="./files/design/5/3.png" class="fancybox" rel="g0"><img src="./files/design/5/3.png" style="margin-top:-12px; margin-left:2px; width:38%" class="fancyimage"></a>
+    <a href="./files/design/5/4.png" class="fancybox" rel="g0"><img src="./files/design/5/4.png" style="margin-top:-12px; margin-left:40px; width:38%" class="fancyimage"></a></p>
+    
+    <div id="table2"> <ul style="font-size: 18px; "><li>Report Sale</li> <li>Report Interest</li> </ul>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <p align="center">
+    <a href="./files/design/5/5.png" class="fancybox" rel="g0"><img src="./files/design/5/5.png" style="margin-top:-12px; margin-left:2px; width:38%" class="fancyimage"></a>
+    <a href="./files/design/5/6.png" class="fancybox" rel="g0"><img src="./files/design/5/6.png" style="margin-top:-12px; margin-left:40px; width:38%" class="fancyimage"></a></p>
+    
+    <div id="table2"> <ul style="font-size: 18px; "><li>Friend's Menu</li> <li>Friend's Details</li> </ul>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <p align="center">
+    <a href="./files/design/5/7.png" class="fancybox" rel="g0"><img src="./files/design/5/7.png" style="margin-top:-12px; margin-left:2px; width:38%" class="fancyimage"></a>
+    <a href="./files/design/5/8.png" class="fancybox" rel="g0"><img src="./files/design/5/8.png" style="margin-top:-12px; margin-left:40px; width:38%" class="fancyimage"></a></p>
+    
+    <div id="table2"> <ul style="font-size: 18px; "><li>Notifications/Updates</li> <li>Settings Menu</li> </ul>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <p align="center">
+    <a href="./files/design/5/000.png" class="fancybox" rel="g0"><img src="./files/design/5/000.png" style="margin-top:-12px; margin-left:2px; width:38%" class="fancyimage"></a>
+    <a href="./files/design/5/001.png" class="fancybox" rel="g0"><img src="./files/design/5/001.png" style="margin-top:-12px; margin-left:40px; width:38%" class="fancyimage"></a></p>
+    
+    <div id="table2"> <ul style="font-size: 18px; "><li>Business Card MockUp 1</li> <li></li> </ul>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <p align="center">
+    <a href="./files/design/5/002.png" class="fancybox" rel="g0"><img src="./files/design/5/002.png" style="margin-top:-12px; margin-left:2px; width:38%" class="fancyimage"></a>
+    <a href="./files/design/5/003.png" class="fancybox" rel="g0"><img src="./files/design/5/003.png" style="margin-top:-12px; margin-left:40px; width:38%" class="fancyimage"></a></p>
+    
+    <div id="table2"> <ul style="font-size: 18px; "><li>Business Card MockUp 2</li> <li></li> </ul>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <br>
+
+
+
+
+    <a class="anchor" name="02"></a>
+    <div id="title"><b>3</b> &nbsp; PORTFOLIO <b style='font-size:20px;'>DESIGN</b>
+    <a class="button button-project round-corners" href="https://www.prism.gatech.edu/~mchi6/files/WireFrame.zip" target="_blank" style="margin-left:8px;">
+         <img src="./files/button/download.png" style ="margin-top:-1px;width:20%;margin-left:-2px;"/> 
+        <span style="font-size:11px;">DL WIREFRAME</span></a>
+    <a class="button button-project round-corners" href="https://www.prism.gatech.edu/~mchi6/Old/index.html" target="_blank">
+         <img src="./files/button/glass.png" style ="margin-top:-1px;width:20%;margin-left:-4px;"/> 
+        <span style="font-size:12px;">VIEW 2013-14</span></a>
+    </div>
+
+
+    <div id="content">
+
+        <p> <b style="font-size:15px;">New and Improved - 2014-15.&nbsp;&nbsp; </b>Mock ups and wireframe created in Photoshop. You can download my sample photoshop file of the wireframe by clicking on the link in the header. I try to focus on quick and easy methods to improve current sections, design new content areas, and managing overall website spacing .</p>
+
+        <p style="text-indent: 0em;">Improvements include: <b> removed </b> Flash banner (not mobile supported), <b>less </b> images <b>more</b> CSS (load faster on mobile), <b>removed</b> iFrame (unreliable navigation), <b>used</b> mobile-first build (use of BootStrap framework), <b>improved</b> navigation (less clicking more viewing), and <b>more focus</b> on content (subheader design). </p>
+        <a href ="./files/design/2/10.png" class="fancybox" rel="gallery1"><img src="./files/design/2/1.png" style="margin-right:5px; margin-left: 15px; margin-top:10px;margin-bottom:20px; border: 1px solid grey; border-top-right-radius:.4em;border-bottom-left-radius:.4em; width:45%; opacity: .95;" /></a>
+        <b style="font-size:25px;">→</b>
+        <a href ="./files/design/2/20.png" class="fancybox" rel="gallery1"><img src="./files/design/2/2.png" style="margin-left:5px; margin-top:10px;margin-bottom:20px; border: 1px solid grey; border-top-right-radius:.4em;border-bottom-left-radius:.4em; width:45%; opacity: .95;" /></a>
+        </div>
+        <div id="table2" style="margin-left:1px;"> <ul style="font-size: 18px; margin-top:-40px;"><li>Portfolio 2013-14 </li> <li>Portfolio 2014-15</li> </ul>
+        </div>
+        <div id="table2" style="margin-left:1px;"> <ul style="font-size: 12px;"><li><b>Old</b> Design</li> <li><b>New</b> Design</li></ul>        
         </div>
 
-         
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="icon-prev"></span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="icon-next"></span>
-        </a>
-        
-    </header>
+    <br>
+    <br>
 
-    <div id="preload-01"></div>
-    <div id="preload-02"></div>
-    <div id="preload-03"></div>
+    <div id="content">
+        <a href ="./files/design/2/30.png" class="fancybox" rel="gallery1"><img src="./files/design/2/3.png" style="margin-right:5px; margin-left: 15px; margin-top:10px;margin-bottom:20px; border: 1px solid grey; border-top-right-radius:.4em;border-bottom-left-radius:.4em; width:45%; opacity: .95;" /></a>
+        <b style="font-size:25px;">→</b>
+        <a href ="./files/design/2/40.png" class="fancybox" rel="gallery1"><img src="./files/design/2/4.png" style="margin-left: 5px; margin-top:10px;margin-bottom:20px; border: 1px solid grey; border-top-right-radius:.4em;border-bottom-left-radius:.4em; width:45%; opacity: .95;" /></a>
+        </div>
+        <div id="table2" style="margin-left:1px;"> <ul style="font-size: 18px; margin-top:-40px;"><li>Content 2013-14 </li> <li>Content 2014-15</li> </ul>
+        </div>
+        <div id="table2" style="margin-left:1px;"> <ul style="font-size: 12px;"><li><b>Old</b> Content Layout</li> <li><b>New</b> Content Layout</li></ul>
+    </div>
 
- 
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/preloader.js"></script>
+    <br>
+    <br>
+
+    <p align="center">
+        <a href="./files/design/2/5.png" class="fancybox" rel="gallery1">
+        <img src="./files/design/2/5.png" style="margin-left: 3px;border:1px solid grey; margin-top:30px; border-top-right-radius:.4em;border-bottom-left-radius:.4em;"width="52%"></a>
+
+        <a href="./files/design/2/6.png" class="fancybox" rel="gallery1">
+        <img src="./files/design/2/6.png" style="margin-left: 35px;border:1px solid grey; margin-top:30px; border-top-right-radius:.4em;border-bottom-left-radius:.4em;"width="24%"></a>
+    </p>
+
+
+    <div id="table2" style="margin-left:40px;"> <ul style="font-size: 18px; margin-top:0px;"><li>Portfolio Site WireFrame </li> <li style="margin-left:6px;">WireFrame PS Layers</li> </ul>
+    </div>
+    <div id="table2" style="margin-left:40px;"> <ul style="font-size: 12px;"><li>Content Spacing</li> <li style="margin-left:8x;">Easy to Modify</li></ul>
+    </div>
+
+    <br><br>
+    <br><br>
+    <br><br>
+
+    <a class="anchor" name="03"></a>
+    <div id="title"><b>4</b> &nbsp; TGBUILD <b style='font-size:20px;'>DESIGN</b>
+    <a class="button button-project round-corners" href="./projects.html#4" target="_blank">
+         <img src="./files/button/glass.png" style ="margin-top:-1px;width:20%;margin-left:-4px;"/> 
+        <span style="font-size:12px;">VIEW PROJECT</span></a>
+    </div>
+
+    <div id="content">
+    <p style="text-indent: 0em;">Improvements from V1 to V2 include: <b> Cleaner color scheme, toolbars more defined, style is kept throughout interface, less button clicking, and better presentation of information. </b> Photoshop was used.</p>  
+    </div>
+    <a href ="./files/design/3/1.png" class="fancybox" rel="gallery2"><img src="./files/design/3/1.png" style="margin-right:5px;margin-left: 72px; margin-top:20px;margin-bottom:5px;margin-top:-12px; border: 1px solid grey; border-top-right-radius:.4em;border-bottom-left-radius:.4em; width:38%;"></a>
+    <b style="font-size:25px;">→</b>
+    <a href ="./files/design/3/2.png" class="fancybox" rel="gallery2"><img src="./files/design/3/2.png" style="margin-left: 5px; margin-top:20px;margin-bottom:5px;margin-top:-12px; border: 1px solid grey; border-top-right-radius:.4em;border-bottom-left-radius:.4em; width:38%;"></a>
+    <div id="table2"> <ul style="font-size: 18px;"><li><b>Version 1 </b> MockUp</li> <li><b>Version 2</b> MockUp</li> </ul></div>
+    <div id="table2"> <ul style="font-size: 12px;"><li><b>Intial</b> Design</li> <li><b>Updated</b> Design</li></ul></div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <a class="anchor" name="04"></a>
+    <div id="title"><b>5</b> &nbsp; GRAPHIC ART <b style='font-size:20px;'>&nbsp; VARIOUS WORKS</b>
+    <!--<a class="button button-project round-corners" href="./projects.html#4" target="_blank">
+         <img src="./files/button/glass.png" style ="margin-top:-1px;width:20%;margin-left:-4px;"/> 
+        <span style="font-size:12px;">VIEW PROJECT</span></a>-->
+    </div>
+
+    <div id="content">
+    <p> <b style="font-size:15px;">Always Designing - Birth-Present.&nbsp;&nbsp; </b>Here are some graphic design pieces I would like to share. Adobe Photoshop and Flash was used to create most images.</p>  
+    </div>
+
+
+    <a href ="https://www.prism.gatech.edu/~mchi6/poster2.jpg" class="fancybox" rel="gallery4"><img src="./files/design/4/13.jpg" style="margin-right:5px;margin-left: 70px; margin-top:0px;margin-bottom:5px;width:38%;" class="fancyimage"></a>
+    <a href ="https://www.prism.gatech.edu/~mchi6/poster1.png" class="fancybox" rel="gallery4"><img src="./files/design/4/12.png" style="margin-left: 35px; margin-top:40px;margin-bottom:5px;margin-top:20px; width:38%;" class="fancyimage"></a>
+    <div id="table2"> <ul style="font-size: 18px;"><li>Basketball Promotional Poster</li> <li>Social Issue Poster</li> </ul></div>
+    <div id="table2"> <ul style="font-size: 12px;"><li>Course Assignment</li> <li>Course Assignment</li></ul></div>
+
+    <br>
+    <br>
+    <br>
+
+
+
+    <a href ="./files/design/4/2.png" class="fancybox" rel="gallery4"><img src="./files/design/4/2.png" style="margin-right:5px;margin-left: 70px; margin-top:20px;margin-bottom:5px; width:38%;" class="fancyimage"></a>
+    <a href ="./files/design/4/3.png" class="fancybox" rel="gallery4"><img src="./files/design/4/3.png" style="margin-left: 35px; margin-top:20px;margin-bottom:5px; width:38%;" class="fancyimage"></a>
+    <div id="table2"> <ul style="font-size: 18px;"><li><b>CSA</b> Promo Flyer</li> <li><b>CSA</b> Meeting Flyer</li> </ul></div>
+    <div id="table2"> <ul style="font-size: 12px;"><li>Chinese Student Association</li> <li>Chinese Student Association</li></ul></div>
+
+
+    <a href ="./files/design/4/1.png" class="fancybox" rel="gallery4"><img src="./files/design/4/1.png" style="margin-right:5px;margin-left: 70px; margin-top:40px;margin-bottom:5px;width:38%;" class="fancyimage"></a>
+    <a href ="./files/design/4/4.png" class="fancybox" rel="gallery4"><img src="./files/design/4/4.png" style="margin-left: 35px; margin-top:40px;margin-bottom:5px;margin-top:50px; width:38%;" class="fancyimage"></a>
+    <div id="table2"> <ul style="font-size: 18px;"><li><b>CSA</b> T-Shirt Design</li> <li><b>CSA</b> Show Flyer</li> </ul></div>
+    <div id="table2"> <ul style="font-size: 12px;"><li>Chinese Student Association</li> <li>Chinese Student Association</li></ul></div>
+
+
+    <a href ="./files/design/4/Photo1.png" class="fancybox" rel="gallery4"><img src="./files/design/4/Photo1.png" style="margin-right:5px;margin-left: 70px; margin-top:40px;margin-bottom:5px;width:38%;" class="fancyimage"></a>
+    <a href ="./files/design/4/Photo2.png" class="fancybox" rel="gallery4"><img src="./files/design/4/Photo2.png" style="margin-left: 35px; margin-top:40px;margin-bottom:5px;margin-top:50px; width:38%;" class="fancyimage"></a>
+    <div id="table2"> <ul style="font-size: 18px;"><li><b>CSA</b> T-Shirts</li> <li>Class Showcase</li> </ul></div>
+    <div id="table2"> <ul style="font-size: 12px;"><li>Chinese Student Association</li> <li>Course Assignment</li></ul></div>
+
+    <a href ="./files/design/4/6.png" class="fancybox" rel="gallery4"><img src="./files/design/4/6.png" style="margin-right:5px;margin-left: 70px; margin-top:40px;margin-bottom:5px;width:38%;" class="fancyimage"></a>
+    <a href ="./files/design/4/5.png" class="fancybox" rel="gallery4"><img src="./files/design/4/5.png" style="margin-left: 35px; margin-top:40px;margin-bottom:5px;margin-top:50px; width:38%;" class="fancyimage"></a>
+    <div id="table2"> <ul style="font-size: 18px;"><li><b>Peace B/W</b> Composition</li> <li><b>Peace B/W</b> Composition</li> </ul></div>
+    <div id="table2"> <ul style="font-size: 12px;"><li>Course Assignment</li> <li>Course Assignment</li></ul></div>
+    <span id="ux-bottom"></span>
+    <a href ="./files/design/4/7.png" class="fancybox" rel="gallery4"><img src="./files/design/4/7.png" style="margin-right:5px;margin-left: 70px; margin-top:40px;margin-bottom:5px;width:38%;" class="fancyimage"></a>
+    <a href ="./files/design/4/8.png" class="fancybox" rel="gallery4"><img src="./files/design/4/8.png" style="margin-left: 35px; margin-top:40px;margin-bottom:5px;margin-top:50px; width:38%;" class="fancyimage"></a>
+    <div id="table2"> <ul style="font-size: 18px;"><li><b>War B/W</b> Composition</li> <li><b>War B/W</b> Composition</li> </ul></div>
+    <div id="table2"> <ul style="font-size: 12px;"><li>Course Assignment</li> <li>Course Assignment</li></ul></div>
+
+
+    <br>
+    <br>
+    <br>
+
+
+    
+    <a href ="./files/design/4/11.png" class="fancybox" rel="gallery4"><img src="./files/design/4/11.png" style="margin-right:5px;margin-left: 70px; margin-top:40px;margin-bottom:5px;width:38%;" class="fancyimage"></a>
+    <a href ="./files/design/4/9.png" class="fancybox" rel="gallery4"><img src="./files/design/4/9.png" style="margin-left: 35px; margin-top:40px;margin-bottom:5px;margin-top:50px; width:38%;" class="fancyimage"></a>
+    <div id="table2"> <ul style="font-size: 18px;"><li><b>Basketball</b> Jersey Design</li> <li><b>Basketball</b> Jersey Design</li> </ul></div>
+    <div id="table2"> <ul style="font-size: 12px;"><li>Front/Back Design</li> <li>Front/Back Design</li></ul></div>
+
+
+
+</div>
+
+<br><br>
+
+<a class="anchor" name="004"></a>
+<!--Page title--> 
+    <h1 class="head-title" align="center">CONTACT</h1>
+
+    <div class="container">
+
+    <div id="title">CONNECT WITH ME</div>
+    <div id="content" style ="margin-left:-20px; font-size: 18px">
+        <p style="margin-left:-5px;">Questions? Contact me!</p>
+        <p> <b style="margin-right:15px;">Contact Email: </b>&nbsp; mchi6@gatech.edu</p>
+        <p> <b style="margin-right:10px;">Phone Number:</b>&nbsp; (678) 514-9211</p>
+        <p> <b style="margin-right:86px;">School: </b> Georgia Institute of Technology</p>
+        <p> <b style="margin-right:70px;">Linkedin: </b> <a href="http://www.linkedin.com/pub/michael-chi/a3/298/305/" target="_blank">View my Profile</a> </p>
+        <!--<p> <b style="margin-right:86px;">GitHub: </b> <a href="https://github.com/mchi6">Click here</a> </p>-->
+    </div>
+
+    </div>
+    
+    <footer class="footer">
+        <p>© 2015 Michael Chi 
+        <!--<br>mchi6@gatech.edu
+        <br>(678) 514-9211</p>-->
+    </footer>
+
+    <div class="sideScroll1">
+    <nav class="navbar navbar-fixed-top" role="navigation">
+    <a href="#002" id="back-to-top" title="Back to Top" class="button0" style="padding: 4px;">&uarr;</a>               
+    <a href="#0" id="back-to-top" title="My Portfolio" class="button1"><h5><b>PROJECT</b></h5> <h1>1</h1></a>
+    <a href="#1" id="back-to-top" title="Business or Bust" class="button2"><h5><b>PROJECT</b></h5> <h1>2</h1></a>
+    <a href="#2" id="back-to-top" title="GradYouNation" class="button3"><h5><b>PROJECT</b></h5> <h1>3</h1></a>
+    <a href="#3" id="back-to-top" title="VG Dev" class="button4"><h5><b>PROJECT</b></h5> <h1>4</h1></a>
+    <a href="#4" id="back-to-top" title="TGBuild" class="button5"><h5><b>PROJECT</b></h5> <h1>5</h1></a>
+    </nav>
+    </div>
+
+
+
+    <div class="sideScroll2">
+    <nav class="navbar navbar-fixed-top" role="navigation">
+    <a href="#003" id="back-to-top" title="Back to Top" class="button0" style="padding: 4px;">&uarr;</a>               
+    <a href="#00" id="back-to-top" title="Portfolio Reel" class="button1"><h5><b>DESIGN</b></h5> <h1>1</h1></a>
+    <a href="#01" id="back-to-top" title="Friends Design" class="button2"><h5><b>DESIGN</b></h5> <h1>2</h1></a>
+    <a href="#02" id="back-to-top" title="Portfolio Design" class="button3"><h5><b>DESIGN</b></h5> <h1>3</h1></a>
+    <a href="#03" id="back-to-top" title="TGBuild Design" class="button4"><h5><b>DESIGN</b></h5> <h1>4</h1></a>
+    <a href="#04" id="back-to-top" title="Graphic Design" class="button5"><h5><b>DESIGN</b></h5> <h1>5</h1></a>
+    </nav>
+    </div>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!--<script src="./Narrow_files/ie10-viewport-bug-workaround.js"></script>-->
+
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function() {
+            $('.fancybox').fancybox({
+                transitionIn : 'none', 
+                transitionOut: 'none',
+                prevEffect : 'none',
+                nextEffect : 'none',
+                fitToView  : true,  
+                openSpeed : 100,
+                closeSpeed : 50,
+                padding: 0,
+                });
+
+            $(".fancybox-video").fancybox({
+            'padding'       : 0,
+            'margin'        : [0,40,40,40],
+            'autoScale'     : false,
+            'width'         : '100%',
+            'height'        : '100%',
+                'type'          : 'iframe',
+            'autoPlay'      : false,
+            'playSpeed'     : 10500,
+            closeBtn        : true,
+            iframe : {
+               scrolling : 'no'
+            },
+            helpers     : {
+               title    : { type : 'inside' },
+               buttons  : {}
+            }
+           });
+        });
+    </script>
+    <script>
+        $(function(){
+            $('#menu').slicknav({label: '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; MICHAEL CHI',});
+        });
+    </script>
+
+    <style>
+    .slicknav_menu { margin-top:0px; }
+    body { color:black; }
+    </style>
 </body>
 
+
+
+
+
+
 </html>
+
